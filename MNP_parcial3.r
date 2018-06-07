@@ -13,7 +13,7 @@ Import=c(2193.2 , 2242.6, 1725.2, 2159.2, 1899, 2015.4, 1646.5, 1736.5, 1412.6, 
 ############################################################
 ### punto 2 
 ############################################################
-cit<-read.table("cittarium.txt", header=TRUE, dec=",")
+cit<-read.table("cittarium.txt", header=TRUE, dec=".")
 attach(cit)
 altura<-cit$ALTO
 longitud<-cit$LARGOLC
@@ -37,7 +37,7 @@ ancova1 <-sm.ancova(E12$LARGOLC, E12$ANCHOCC, E12$ESTACION , model="equal")
 ############################################################
 ### punto 3
 ############################################################
-qxTmor<-read.table("qxTmor.txt", header=TRUE, dec=",")
+qxTmor<-read.table("qxTmor.txt", header=TRUE, dec=".")
 x<-qxTmor$edad
 y<- qxTmor$qx
 plot(x,qx, xlim=c(20,100)) #lines(edad,qx)
