@@ -22,7 +22,7 @@ library(sm)
 #H1: La asociación entre altura y longitud no es lineal
 regnp=sm.regression(altura,longitud, model="linear",test=TRUE, col=2, lwd=2)
 regnp$p # P-valor de la prueba 
-# como el p-valor de la prueba es cero se rechaza H0 lineal.
+
 
 estacion1<-subset(cit, ESTACION=="1")
 estacion2<-subset(cit, ESTACION=="2")
