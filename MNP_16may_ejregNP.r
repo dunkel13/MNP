@@ -60,7 +60,7 @@ Isla=subset(Ramiro,Sitio=="I")
 Flores=subset(Ramiro,Sitio=="F")
 
 GI=rbind(Guajira, Isla)
-#H0:
+#H0: las curvas de regresión son iguales (model="equal")
 ancova2 <-sm.ancova(GI$Talla,GI$Peso, GI$Sitio, model="equal") #está comparando dos Sitios Guajira e Isla, y el p-valor=0.4829 ent. NO R.H0
 GF=rbind(Guajira, Flores)
 ancova3 <-sm.ancova(GF$Talla,GF$Peso, GF$Sitio, model="equal")
