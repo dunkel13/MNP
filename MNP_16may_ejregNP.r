@@ -53,13 +53,15 @@ regnp=sm.regression(Talla,Peso, model="linear", col=2, lwd=2)
 
 # ANCOVA
 
-ancova1 <-sm.ancova(Talla,Peso, Sitio, model="equal")
+ancova1 <-sm.ancova(Talla,Peso, Sitio, model="equal") #PRUEBA GLOBAL, como pvalor=0.7245m No R.H0
+#suponiendo que rechazamos H0, hacemos las comparaciones por pares
 Guajira=subset(Ramiro,Sitio=="G")
 Isla=subset(Ramiro,Sitio=="I")
 Flores=subset(Ramiro,Sitio=="F")
 
 GI=rbind(Guajira, Isla)
-ancova2 <-sm.ancova(GI$Talla,GI$Peso, GI$Sitio, model="equal")
+#H0:
+ancova2 <-sm.ancova(GI$Talla,GI$Peso, GI$Sitio, model="equal") #está comparando dos Sitios Guajira e Isla, y el p-valor=0.4829 ent. NO R.H0
 GF=rbind(Guajira, Flores)
 ancova3 <-sm.ancova(GF$Talla,GF$Peso, GF$Sitio, model="equal")
 IF=rbind(Isla, Flores)
