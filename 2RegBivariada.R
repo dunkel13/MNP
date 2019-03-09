@@ -61,6 +61,5 @@ for(i in 1:length(points1)){
 a
 
 persp(points1,points2,a, phi=10, theta=-60, xlim=c(0,100), ylim=c(4,40),ticktype="detailed")
-
 plot(lstat,rm)
 lines(points2,diag(a),col=2,lwd=2)
